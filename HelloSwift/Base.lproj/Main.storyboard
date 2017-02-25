@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,13 +76,79 @@
                     <view key="view" contentMode="scaleToFill" id="d9c-8y-zLW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cak-CL-TTn" userLabel="ConverterView">
+                                <rect key="frame" x="36" y="236" width="248" height="96"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rnv-PQ-rm1">
+                                        <rect key="frame" x="8" y="8" width="232" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="₽" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QgO-ZG-EKx">
+                                                <rect key="frame" x="0.0" y="25" width="76" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ptY-Qi-dHt">
+                                                <rect key="frame" x="84" y="0.0" width="64" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m6-6Y-lpF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
+                                                        <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="lEY-Yw-2r8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <state key="normal" title="→">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQA-mH-zRQ">
+                                                        <rect key="frame" x="0.0" y="44" width="64" height="36"/>
+                                                        <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="ljc-Nr-Sd4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <state key="normal" title="←">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="€" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kny-gw-JBn">
+                                                <rect key="frame" x="156" y="25" width="76" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="QgO-ZG-EKx" firstAttribute="width" secondItem="Kny-gw-JBn" secondAttribute="width" id="VIn-Wa-siK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Rnv-PQ-rm1" secondAttribute="trailing" id="AeR-Ke-m4O"/>
+                                    <constraint firstItem="Rnv-PQ-rm1" firstAttribute="top" secondItem="Cak-CL-TTn" secondAttribute="topMargin" id="Pnq-Mo-tF2"/>
+                                    <constraint firstItem="Rnv-PQ-rm1" firstAttribute="leading" secondItem="Cak-CL-TTn" secondAttribute="leadingMargin" id="nS8-uv-0m6"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Rnv-PQ-rm1" secondAttribute="bottom" id="wx0-cu-tLr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cak-CL-TTn" firstAttribute="trailing" secondItem="d9c-8y-zLW" secondAttribute="trailingMargin" constant="-20" id="2Xo-cQ-dnb"/>
+                            <constraint firstItem="Cak-CL-TTn" firstAttribute="centerY" secondItem="d9c-8y-zLW" secondAttribute="centerY" id="I3N-nX-c1Q"/>
+                            <constraint firstItem="Cak-CL-TTn" firstAttribute="leading" secondItem="d9c-8y-zLW" secondAttribute="leadingMargin" constant="20" id="fzU-NO-yXr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Converter" id="w6Y-JR-PjA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcd-vi-q1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="790"/>
+            <point key="canvasLocation" x="133.125" y="789.08450704225356"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MtZ-AQ-MIS">

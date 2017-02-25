@@ -38,7 +38,7 @@ class HelloSwiftViewController: UIViewController {
         // Добавим кнопку на новый контроллер
         alert.addAction(helloAction)
         
-        //Прелставим всплывающее сообщение
+        // Представим всплывающее сообщение
         present(alert,
                 animated: true,
                 completion: nil)
