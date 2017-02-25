@@ -38,8 +38,16 @@ class ConverterView: UIView {
     }
 
     
-    @IBOutlet private weak var toTextField: UITextField?
-    @IBOutlet private weak var fromTextField: UITextField?
+    @IBOutlet private weak var toTextField: UITextField? {
+        didSet {
+            toTextField?.delegate = self
+        }
+    }
+    @IBOutlet private weak var fromTextField: UITextField? {
+        didSet {
+            fromTextField?.delegate = self
+        }
+    }
     
     @IBAction func forwardPressed() {
         delegate?.converterView(view: self, convertForward: fromValue)
@@ -63,4 +71,15 @@ class ConverterView: UIView {
     
     
     
+}
+
+// Релазуем поддержку протокола UITextFieldDelegate классом ConverterView, чтобы обрабатывать методы класса UITextField
+
+extension ConverterView: UITextFieldDelegate {
+    
+    // В момент, когда начинается редактирование
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // сотрём всё лишнее из строки
+        textField.text = textField.text?.filterForNumberConversion
+    }
 }

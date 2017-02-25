@@ -22,7 +22,7 @@ class ConverterViewController: UIViewController {
 
     func setup() {
         
-        // Станем делегатом для нашего ConverterView
+        // Сделать класс делегатом для нашего ConverterView
         converterView.delegate = self
     }
     
