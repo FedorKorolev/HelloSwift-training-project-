@@ -12,6 +12,9 @@
 		75D832231E616605009DAD1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D832221E616605009DAD1E /* Assets.xcassets */; };
 		75D832261E616605009DAD1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D832241E616605009DAD1E /* LaunchScreen.storyboard */; };
 		75D8322E1E617002009DAD1E /* HelloSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D8322D1E617002009DAD1E /* HelloSwiftViewController.swift */; };
+		75D832301E618D8B009DAD1E /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D8322F1E618D8B009DAD1E /* ConverterViewController.swift */; };
+		75D832321E618DC1009DAD1E /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D832311E618DC1009DAD1E /* Converter.swift */; };
+		75D832341E618DF7009DAD1E /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D832331E618DF7009DAD1E /* ConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		75D832251E616605009DAD1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D832271E616605009DAD1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75D8322D1E617002009DAD1E /* HelloSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloSwiftViewController.swift; sourceTree = "<group>"; };
+		75D8322F1E618D8B009DAD1E /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		75D832311E618DC1009DAD1E /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		75D832331E618DF7009DAD1E /* ConverterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +60,8 @@
 		75D8321A1E616605009DAD1E /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
-				75D8322D1E617002009DAD1E /* HelloSwiftViewController.swift */,
+				75D832361E618E48009DAD1E /* HelloSwift */,
+				75D832351E618E23009DAD1E /* Converter */,
 				75D8321B1E616605009DAD1E /* AppDelegate.swift */,
 				75D8321F1E616605009DAD1E /* Main.storyboard */,
 				75D832221E616605009DAD1E /* Assets.xcassets */,
@@ -62,6 +69,24 @@
 				75D832271E616605009DAD1E /* Info.plist */,
 			);
 			path = HelloSwift;
+			sourceTree = "<group>";
+		};
+		75D832351E618E23009DAD1E /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				75D8322F1E618D8B009DAD1E /* ConverterViewController.swift */,
+				75D832311E618DC1009DAD1E /* Converter.swift */,
+				75D832331E618DF7009DAD1E /* ConverterView.swift */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
+		75D832361E618E48009DAD1E /* HelloSwift */ = {
+			isa = PBXGroup;
+			children = (
+				75D8322D1E617002009DAD1E /* HelloSwiftViewController.swift */,
+			);
+			name = HelloSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +163,9 @@
 			files = (
 				75D8321C1E616605009DAD1E /* AppDelegate.swift in Sources */,
 				75D8322E1E617002009DAD1E /* HelloSwiftViewController.swift in Sources */,
+				75D832321E618DC1009DAD1E /* Converter.swift in Sources */,
+				75D832341E618DF7009DAD1E /* ConverterView.swift in Sources */,
+				75D832301E618D8B009DAD1E /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +327,7 @@
 				75D8322C1E616605009DAD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
