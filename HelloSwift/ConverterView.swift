@@ -45,7 +45,7 @@ class ConverterView: UIView {
         delegate?.converterView(view: self, convertForward: fromValue)
     }
     @IBAction func backwardPressed() {
-        delegate?.converterView(view: self, convertBackward: fromValue)
+        delegate?.converterView(view: self, convertBackward: toValue)
     }
     
     // Как сделать инициализатор View с дополнительными параметрами, указанными в Setup, которые будут выполняться при загрузке сториборда
